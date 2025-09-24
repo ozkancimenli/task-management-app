@@ -21,13 +21,35 @@ Users can create, edit, delete, and view tasks in a secure, authenticated enviro
 
 ## 📂 Project Structure
 src/
-components/ # NavBar, TaskForm, TaskList, etc.
-context/ # Global state management (TaskContext)
-hooks/ # Custom hooks
-pages/ # Dashboard, TaskDetails, Create, Edit, Login, NotFound
-types/ # TypeScript interfaces and types
-App.tsx # App routes
-main.tsx # App entry point
+│
+├── components/        # Reusable UI components
+│   ├── NavBar.tsx         # Navigation bar with Auth0 login/logout
+│   ├── ProtectedRoute.tsx # Route guard for authenticated pages
+│   ├── TaskForm.tsx       # Form component (create & edit tasks)
+│   ├── TaskItem.tsx       # Single task card
+│   └── TaskList.tsx       # Task list with actions
+│
+├── context/           # Global state with React Context API
+│   └── TaskContext.tsx    # Provides task data & actions (CRUD)
+│
+├── hooks/             # Custom hooks
+│   └── useTasks.ts        # Typed hook to access TaskContext
+│
+├── pages/             # Application pages (routed with React Router)
+│   ├── DashboardPage.tsx  # Main dashboard with task list
+│   ├── TaskDetailsPage.tsx# Single task view
+│   ├── TaskCreatePage.tsx # Create task form
+│   ├── TaskEditPage.tsx   # Edit task form
+│   ├── LoginPage.tsx      # Auth0 login prompt
+│   └── NotFoundPage.tsx   # 404 fallback page
+│
+├── types/             # TypeScript interfaces & types
+│   └── task.ts            # Task interface, Priority, Status types
+│
+├── App.tsx            # Routes & layout (NavBar + Pages)
+├── main.tsx           # Entry point (ReactDOM + Providers)
+└── .env      # Environment file
+
 
 
 ---
