@@ -29,8 +29,6 @@ types/ # TypeScript interfaces and types
 App.tsx # App routes
 main.tsx # App entry point
 
-yaml
-Copy code
 
 ---
 
@@ -40,49 +38,43 @@ Copy code
    ```bash
    git clone https://github.com/YOUR_USERNAME/task-management-app.git
    cd task-management-app
-Install dependencies
 
-bash
-Copy code
+
+
+# Install dependencies
 npm install
 Set up environment variables
 Create a .env file in the project root:
 
-env
-Copy code
+# env
 VITE_AUTH0_DOMAIN=your-tenant.us.auth0.com
 VITE_AUTH0_CLIENT_ID=your-client-id
 VITE_AUTH0_REDIRECT_URI=http://localhost:5173
-Run the app
 
-bash
-Copy code
+
+
+# Run the app
 npm run dev
-🔒 Auth0 Setup
+
+
+
+# 🔒 Auth0 Setup
 Go to Auth0 Dashboard
-
 Create a new Single Page Application (SPA)
-
 Add the following URLs to Allowed Callback URLs, Logout URLs, and CORS Origins:
-
-arduino
-Copy code
 http://localhost:5173
+
 Copy Domain and Client ID into .env
 
-📸 Screenshots (optional)
+# 📸 Screenshots (optional)
 Add screenshots of your app here (Dashboard, Task Form, etc.)
 
-🏗 Tech Stack
+# 🏗 Tech Stack
 React + Vite
-
 TypeScript
-
 Auth0 for authentication
-
 React Router for routing
-
 React-Bootstrap for UI
 
-📜 License
+# 📜 License
 This project is licensed under the MIT License.
